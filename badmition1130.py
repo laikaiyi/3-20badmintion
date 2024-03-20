@@ -3,6 +3,7 @@ from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent, TextMessage, TextSendMessage
 from waitress import serve
+import inspect
 
 # 初始化 Flask 應用程式
 app = Flask(__name__)
@@ -41,3 +42,4 @@ def handle_message(event):
 # 在主程式塊中使用 Waitress 作為伺服器
 if __name__ == "__main__":
     serve(app, host='0.0.0.0', port=8080)
+
