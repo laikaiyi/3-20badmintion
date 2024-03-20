@@ -2,3 +2,5 @@
 flask==2.0.1
 line-bot-sdk==2.1.0
 gunicorn==19.7.1
+line-bot-sdk==1.19.0
+requests==2.25.1
