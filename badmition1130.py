@@ -48,10 +48,8 @@ import inspect
 def sample_function(arg1, arg2='default', *args, kwarg1, kwarg2='kwdefault', **kwargs):
     pass
 
-spec = inspect.getfullargspec(sample_function)
-print("Arguments:", spec.args)
-print("Default values:", spec.defaults)
-print("Keyword-only arguments:", spec.kwonlyargs)
-print("Keyword-only default values:", spec.kwonlydefaults)
-print("Annotations:", spec.annotations)
-
+sig = inspect.signature(sample_function)
+parameters = sig.parameters
+print("Parameters:")
+for name, param in parameters.items():
+    print(f"{name}: {param.kind}, default={param.default}")
