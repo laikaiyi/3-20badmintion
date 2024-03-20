@@ -43,3 +43,15 @@ def handle_message(event):
 if __name__ == "__main__":
     serve(app, host='0.0.0.0', port=8080)
 
+import inspect
+
+def sample_function(arg1, arg2='default', *args, kwarg1, kwarg2='kwdefault', **kwargs):
+    pass
+
+spec = inspect.getfullargspec(sample_function)
+print("Arguments:", spec.args)
+print("Default values:", spec.defaults)
+print("Keyword-only arguments:", spec.kwonlyargs)
+print("Keyword-only default values:", spec.kwonlydefaults)
+print("Annotations:", spec.annotations)
+
