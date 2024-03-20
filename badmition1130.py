@@ -8,8 +8,8 @@ from waitress import serve
 app = Flask(__name__)
 
 # 用你實際的值替換 'YOUR_CHANNEL_ACCESS_TOKEN' 和 'YOUR_CHANNEL_SECRET'
-line_bot_api = LineBotApi('你的 Channel Access Token')
-handler = WebhookHandler('你的 Channel Secret')
+line_bot_api = LineBotApi('FgRwDsmCC055uMWW/YTiv/X/+vP+WzYMz/X6nl9wde6iaB/Q/C1chDgrGCDxHJVnK5mcR8wJmKuYCT5ck5OGRbw1e6BW9C9JtQaQIQefuomJ4vpmmpmmpMr; gdB04t89/1O/w1cDnyilFU=')
+handler = WebhookHandler('d59461ed36fad764c35e258a67fe724f')
 
 @app.route("/callback", methods=['POST'])
 def callback():
