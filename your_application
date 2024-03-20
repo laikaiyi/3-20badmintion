@@ -1,5 +1,0 @@
-your_project/
-├── your_application/
-│   ├── __init__.py
-│   └── ...
-└── other_files
